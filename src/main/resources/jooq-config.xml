@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration xmlns="http://www.jooq.org/xsd/jooq-codegen-3.11.0.xsd">
+
+    <jdbc>
+        <!-- Dummy configurations for generating the classes in a local setup; these settings should not match real,
+        production settings -->
+        <driver>org.sqlite.JDBC</driver>
+        <url>jdbc:sqlite:database.db</url>
+        <user>admin</user>
+        <password>admin</password>
+    </jdbc>
+
+    <generator>
+        <name>org.jooq.codegen.JavaGenerator</name>
+        <database>
+            <name>org.jooq.meta.sqlite.SQLiteDatabase</name>
+            <includes>.*</includes>
+            <!-- Ignore Flyway tables -->
+            <excludes>FLYWAY_SCHEMA_HISTORY</excludes>
+            <outputSchemaToDefault>false</outputSchemaToDefault>
+        </database>
+        <generate>
+            <globalObjectReferences>false</globalObjectReferences>
+            <javaTimeTypes>true</javaTimeTypes>
+        </generate>
+        <target>
+            <packageName>com.eldorado.cleaningservices.infrastructure.repository.jooq</packageName>
+            <directory>src/main/java</directory>
+        </target>
+    </generator>
+</configuration>
