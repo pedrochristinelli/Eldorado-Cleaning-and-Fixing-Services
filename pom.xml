@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.eldorado</groupId>
 	<artifactId>cleaning-services</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<name>cleaning-services</name>
 	<description>A Backend Developer Challenge provided by Eldorado Research Institute</description>
 	<properties>
@@ -82,7 +82,7 @@
 						<configuration>
 							<!-- Whether jOOQ should skip generating sources; defaults to "true". Can be overridden, for
                              example, with: "mvn clean install -Dskip.jooq.generation=false". -->
-							<skip>false</skip>
+							<skip>true</skip>
 							<configurationFile>src/main/resources/jooq-config.xml</configurationFile>
 						</configuration>
 					</execution>
