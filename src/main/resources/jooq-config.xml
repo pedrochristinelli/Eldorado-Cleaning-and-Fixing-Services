@@ -5,7 +5,7 @@
         <!-- Dummy configurations for generating the classes in a local setup; these settings should not match real,
         production settings -->
         <driver>org.sqlite.JDBC</driver>
-        <url>jdbc:sqlite:resource/database.db</url>
+        <url>jdbc:sqlite:src/main/resources/database.db</url>
         <user>admin</user>
         <password>admin</password>
     </jdbc>
